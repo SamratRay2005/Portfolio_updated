@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Intro Animation Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-text-container">
+            <h1 class="intro-title"></h1>
+            <div class="intro-line"></div>
+        </div>
+    </div>
+
+    <div class="layout">
+        <main id="main-content">
+            
+            <section id="overview" class="hero-section">
+                <div class="hero-text">
+                    <h1 id="hero-name" class="vertical-name" style="opacity: 0;"></h1>
+                    <div class="hero-details">
+                        <h2 id="hero-title">Loading title...</h2>
+                        <p id="hero-bio">Loading bio...</p>
+                        
+                        <div class="hero-buttons">
+                            <a id="btn-cv" href="#" class="btn-primary" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+                            <a id="btn-contact" href="#" class="btn-outline">Contact Me</a>
+                        </div>
+
+                        <div class="hero-socials" id="hero-socials"></div>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img id="hero-avatar" src="" alt="Profile Photo">
+                    <div class="arrow-indicator">
+                        <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M140 60 C 100 70, 40 70, 10 20" stroke="url(#arrow-gradient)" stroke-width="2" stroke-linecap="round" fill="none" marker-end="url(#arrowhead)"/>
+                            <defs>
+                                <linearGradient id="arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#58a6ff" />
+                                    <stop offset="100%" stop-color="#a371f7" />
+                                </linearGradient>
+                                <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+                                    <path d="M2 2 L10 6 L2 10" stroke="#58a6ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="content-section">
+                <h2 class="section-title"><i class="fas fa-code-branch"></i> Projects</h2>
+                <div class="grid-container" id="projects-grid"></div>
+            </section>
+
+            <section id="education" class="content-section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="timeline" id="education-list"></div>
+            </section>
+
+            <section id="skills" class="content-section">
+                <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
+                <div class="skills-wrapper" id="skills-list"></div>
+            </section>
+
+            <section id="certifications" class="content-section">
+                <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+                <div class="list-container" id="certifications-list"></div>
+            </section>
+
+            <section id="achievements" class="content-section">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> Achievements</h2>
+                <div class="grid-container" id="achievements-list"></div>
+            </section>
+
+            <footer>
+                <p>Designed with <i class="fas fa-heart"></i> by <span id="footer-name"></span></p>
+            </footer>
+        </main>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#overview" class="active">Overview</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
